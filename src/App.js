@@ -2,12 +2,18 @@
 import './App.css';
 import './Components/News';
 import News from './Components/News';
+import Auth  from './Components/Auth';
+
 
 function App() {
   return (
     <div className="App">
 
-      <News/>
+      {/* <News/> */}
+
+      <Auth/>
+
+      
       
     </div>
   );

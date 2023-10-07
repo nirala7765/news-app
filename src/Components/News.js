@@ -47,6 +47,31 @@ function News() {
       <p>{news[1]["description"]}</p>
       <p>{news[1]["content"]}</p>
       <h2>{news[1]["publishedAt"]}</h2>
+      
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
+
+      <img style={{ width: "250px" }} src={news[2]["image"]} alt='NewsImages' />
+      <h1>{news[2]["title"]} </h1>
+      <p>{news[2]["description"]}</p>
+      <p>{news[2]["content"]}</p>
+      <h2>{news[2]["publishedAt"]}</h2>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <img style={{ width: "250px" }} src={news[3]["image"]} alt='NewsImages' />
+      <h1>{news[3]["title"]} </h1>
+      <p>{news[3]["description"]}</p>
+      <p>{news[3]["content"]}</p>
+      <h2>{news[3]["publishedAt"]}</h2>
+      
+
 
 
       
