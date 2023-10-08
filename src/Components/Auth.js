@@ -7,7 +7,7 @@ import User from './User'
 
 
 function Auth() {
-    const [userData, setUserData] = useState("userData");
+    const [userData, setUserData] = useState("");
 
     if (userData) {
         window.localStorage.setItem("Name", userData.name);
@@ -54,6 +54,7 @@ function Auth() {
 
                         console.log("logged IN ======>", credentialResponse);
                     }}
+                    
                     onError={() => {
                         console.log('Login Failed');
                     }}
