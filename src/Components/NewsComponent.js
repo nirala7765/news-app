@@ -1,15 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import NewsCard from './NewsCard';
+import '../Styles/NewsComponent.css'
+
+
+let inputStyle = {
+  width: "280px",
+  padding : "10px",
+  borderRadius : "5px",
+  outline: "none",
+  marginTop:"20px",
+  marginBottom: "20px",
+  marginLeft:"calc((80vw)/2)"
+
+}
 
 function NewsComponent() {
 
-  const [newData,setNewData] = useState([])
+  const [newData, setNewData] = useState([]);
+  const [search,setSearch]=useState('tech');
 
-  useEffect(()=>{
+  useEffect(() => {
 
-    (async function f1(){
+    (async function f1() {
 
-      let url = "https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=8cfd02f9e44f7aae1408fda3bd215ba5";
+      let url = 
+      `https://gnews.io/api/v4/search?q=${search}&lang=en&country=us&max=10&apikey=6d7d20daa2c33c11dfdb6a2d918dc53b`;
 
       const response = await fetch(url);
 
@@ -23,19 +38,42 @@ function NewsComponent() {
 
     })();
 
-  });
+  }, [search]);
   return (
-    <div>
 
 
-      {newData?.map((item)=>{
-        return <NewsCard data = {item}/>;
+    <>
 
-      })}
+      <input
+      style={inputStyle}
+      placeholder='Search Your News!'
+
+      onChange={(e)=>{
+        setSearch(e.target.value);
+
+      }}
 
       
+      />
 
-    </div>
+
+
+
+
+      <div className='News-Component'>
+
+
+        {newData?.map((item) => {
+          return <NewsCard data={item} />;
+
+        })}
+
+
+
+      </div>
+
+    </>
+
   )
 }
 

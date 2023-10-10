@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Styles/NewsCard.css';
 
 function NewsCard(props) {
 
@@ -21,7 +22,7 @@ function NewsCard(props) {
 
             <h2 className='card-title'>{props.data.title}</h2>
             <p className='card-description'>{props.data.description}</p>
-            <p className='card-content'>{props.data.content}</p>
+            <p className='News-content'>{props.data.content}</p>
 
 
             <h5 className='time-Stamp'>{date.toString()}</h5>
@@ -36,4 +37,4 @@ function NewsCard(props) {
   )
 }
 
-export default NewsCard
+export default NewsCard;

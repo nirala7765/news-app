@@ -2,7 +2,7 @@
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import jwt_decode from "jwt-decode";
 import { useState } from 'react';
-import User from './User'
+import User from './User';
 
 
 
@@ -63,7 +63,7 @@ function Auth() {
 
 
 
-            </GoogleOAuthProvider>;
+            </GoogleOAuthProvider>
 
 
 
