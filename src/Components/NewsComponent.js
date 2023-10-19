@@ -24,7 +24,7 @@ function NewsComponent() {
     (async function f1() {
 
       let url = 
-      `https://gnews.io/api/v4/search?q=${search}&lang=en&country=us&max=10&apikey=6d7d20daa2c33c11dfdb6a2d918dc53b`;
+      `https://gnews.io/api/v4/search?q=${search}&lang=en&country=us&max=10&apikey=8cfd02f9e44f7aae1408fda3bd215ba5`;
 
       const response = await fetch(url);
 
